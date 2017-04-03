@@ -7,60 +7,60 @@
  * Implements a node, for use in lists and other container classes.
  *****************************************************/
 
-public class DLLNode<T> 
+public class DLLNode<T>
 {
 
-    private T _cargo;    //cargo may only be of type String
-    private DLLNode _nextNode; //pointer to next LLNode
-    private DLLNode _prevNode; //pointer to previous
+		private T _cargo;    //cargo may only be of type String
+		private DLLNode<T> _nextNode; //pointer to next LLNode
+		private DLLNode<T> _prevNode; //pointer to previous
 
-    // constructor -- initializes instance vars
-    public DLLNode( T value, DLLNode prev, DLLNode next) 
-    {
-        _cargo = value;
-        _nextNode = next;
-        _prevNode = prev;
-    }
-
-
-    //--------------v  ACCESSORS  v--------------
-    public T getValue() { return _cargo; }
-
-    public DLLNode getNext() { return _nextNode; }
-    
-    public DLLNode getPrev() { return _prevNode; }
-    //--------------^  ACCESSORS  ^--------------
+		// constructor -- initializes instance vars
+		public DLLNode( T value, DLLNode<T> prev, DLLNode<T> next)
+		{
+				_cargo = value;
+				_nextNode = next;
+				_prevNode = prev;
+		}
 
 
-    //--------------v  MUTATORS  v--------------
-    public T setCargo( T newCargo ) 
-    {
-        T replaced = _cargo;
-        _cargo = newCargo;
-        return replaced;
-    }
+		//--------------v  ACCESSORS  v--------------
+		public T getValue() { return _cargo; }
 
-    public DLLNode setNext( DLLNode newNext ) 
-    {
-        DLLNode replaced = _nextNode;
-        _nextNode = newNext;
-        return replaced;
-    }
-    
-    public DLLNode setPrev( DLLNode newPrev ) 
-    {
-        DLLNode replaced = _prevNode;
-        _prevNode = newPrev;
-        return replaced;
-    }
-    //--------------^  MUTATORS  ^--------------
+		public DLLNode<T> getNext() { return _nextNode; }
+
+		public DLLNode<T> getPrev() { return _prevNode; }
+		//--------------^  ACCESSORS  ^--------------
 
 
-    // override inherited toString
-    public String toString() { return _cargo.toString(); }
+		//--------------v  MUTATORS  v--------------
+		public T setCargo( T newCargo )
+		{
+				T replaced = _cargo;
+				_cargo = newCargo;
+				return replaced;
+		}
+
+		public DLLNode<T> setNext( DLLNode<T> newNext )
+		{
+				DLLNode<T> replaced = _nextNode;
+				_nextNode = newNext;
+				return replaced;
+		}
+
+		public DLLNode<T> setPrev( DLLNode<T> newPrev )
+		{
+				DLLNode<T> replaced = _prevNode;
+				_prevNode = newPrev;
+				return replaced;
+		}
+		//--------------^  MUTATORS  ^--------------
+
+
+		// override inherited toString
+		public String toString() { return _cargo.toString(); }
 
 
 
-    //end main
+		//end main
 
 }//end class LLNode
