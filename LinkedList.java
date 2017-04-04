@@ -1,6 +1,6 @@
 import java.util.NoSuchElementException;
 
-public class LLDeque<T> implements Deque<T> {
+public class LinkedList<T> implements Deque<T> {
 	private DLLNode<T> _front;
 	private DLLNode<T> _end;
 	private int size;
