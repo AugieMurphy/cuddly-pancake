@@ -18,7 +18,7 @@ public interface Deque<T> extends Queue<T> {
     public T peekLast(); //
 
     // public Iterator<T> iterator();
-    public int size(); //
+    //public int size(); //
     public boolean isEmpty(); //
 }
 
